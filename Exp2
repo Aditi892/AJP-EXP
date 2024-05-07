@@ -1,0 +1,68 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class Exp2 extends Frame implements MouseListener, WindowListener {
+
+    public Exp2() {
+        addMouseListener(this);
+        addWindowListener(this); // Add WindowListener to handle window closing event
+        setSize(300, 200);
+        setTitle("Mouse Events Frame");
+        setVisible(false); // Frame is initially invisible
+    }
+
+    public static void main(String[] args) {
+        Exp2 frame = new Exp2();
+        frame.setVisible(true);
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        System.out.println("Mouse clicked");
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        System.out.println("Mouse entered");
+        setVisible(true); // Make frame visible when mouse enters
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        System.out.println("Mouse exited");
+    }
+
+    // Unused mouse listener methods
+    @Override
+    public void mousePressed(MouseEvent e) {}
+
+    @Override
+    public void mouseReleased(MouseEvent e) {}
+
+    // WindowListener methods
+    @Override
+    public void windowClosing(WindowEvent e) {
+        setVisible(false); // Hide the frame
+        dispose(); // Release any resources associated with the frame
+        System.exit(0); // Exit the application
+    }
+
+    // Unused WindowListener methods
+    @Override
+    public void windowOpened(WindowEvent e) {}
+
+    @Override
+    public void windowClosed(WindowEvent e) {}
+
+    @Override
+    public void windowIconified(WindowEvent e) {}
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {}
+
+    @Override
+    public void windowActivated(WindowEvent e) {}
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {}
+}
