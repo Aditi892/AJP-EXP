@@ -7,7 +7,7 @@ public class Expt4 {
 	
 	static final String DB_URL = "jdbc:mysql://localhost:3306/?user=root";
 	static String USER = "root"; //
-	static String PASS = "Trappist2b"; //
+	static String PASS = "root"; //
 
 	public static void main(String[] args) {
 		
