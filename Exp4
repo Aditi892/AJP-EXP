@@ -30,3 +30,11 @@ public class Expt4 {
 		}
 	}
 }
+
+sql database
+
+create database Cricket;
+use Cricket;
+create table registration (jersyNo int(25), name varchar(25), lastname  varchar(25), age int(5));
+
+select * from registration;
